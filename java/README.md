@@ -1,5 +1,5 @@
 ## HashMap
-###jdk1.7版本
+### jdk1.7版本
 * 使用数组+链表结构存储数据
 * 数组下标计算方式，自定义hash散列算法，使得散列值尽可能的分散。
     > (key.hashCode() ^ key.hashCode()>>>16) & (length - 1)
