@@ -35,7 +35,7 @@ class Entry:
         pass
 
 
-class Map:
+class HashMap:
 
     # 默认长度为16
     DEFAULT_LENGTH = 1 << 4
@@ -171,15 +171,16 @@ class Map:
         return entryTable
 
 
-myMap = Map()
+if __name__=="__main__":
+    myMap = HashMap()
 
-for i in range(14):
-    myMap.put("testkey"+str(i), "testvalue"+str(i))
+    for i in range(14):
+        myMap.put("testkey" + str(i), "testvalue" + str(i))
 
-print("已经使用的大小=%d" % (myMap.size()))
+    print("已经使用的大小=%d" % (myMap.size()))
 
-print("查找value=%s" % (myMap.get("testkey1")))
+    print("查找value=%s" % (myMap.get("testkey1")))
 
-entryTable = myMap.entrySet()
+    entryTable = myMap.entrySet()
 
-print("entryTable实际大小=%d"%(len(entryTable)))
+    print("entryTable实际大小=%d" % (len(entryTable)))
